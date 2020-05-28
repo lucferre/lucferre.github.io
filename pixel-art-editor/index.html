@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" charset="UTF-8">
+    <script src="app.js"></script>
+    <title>JS Drawing App</title>
+</head>
+<body>
+    <div id="grid"></div>
+    <div id="popup" class="">
+        <div class="popup-window">
+            <p class="instructions-new-doc">Create a new artboard</p>
+            <img src="img/arrow.svg" height="60px" alt="" class="arrow">
+            <div class="options-box">
+                <div class="option" onclick="createGrid('small')">
+                    <img src="img/new.svg" alt="">
+                    <p>20 x 16</p>
+                </div>
+                <div class="option" onclick="createGrid('medium')">
+                    <img src="img/new.svg" alt="">
+                    <p>30 x 20</p>
+                </div>
+                <div class="option" onclick="createGrid('big')">
+                    <img src="img/new.svg" alt="">
+                    <p>40 x 24</p>
+                </div>
+            </div>
+            <div class="top-bar">
+                <div class="top-bar-button top-bar-button-red"></div>
+                <div class="top-bar-button top-bar-button-yellow"></div>
+                <div class="top-bar-button top-bar-button-green"></div>
+            </div>
+        </div>
+    </div>
+    <div class="color-palette">
+        <div id="white" onclick="setSelectedColor(this.id)"></div>
+        <div id="red" onclick="setSelectedColor(this.id)"></div>
+        <div id="orange" onclick="setSelectedColor(this.id)"></div>
+        <div id="yellow" onclick="setSelectedColor(this.id)"></div>
+        <div id="green" onclick="setSelectedColor(this.id)"></div>
+        <div id="blue" onclick="setSelectedColor(this.id)"></div>
+        <div id="indigo" onclick="setSelectedColor(this.id)"></div>
+        <div id="violet" onclick="setSelectedColor(this.id)"></div>
+        <div id="black" onclick="setSelectedColor(this.id)"></div>
+    </div>
+    <div class="container">
+
+    </div>
+    <div class="right-options">
+        <div id="selected-color" class="initial-color"></div>
+        <h3 class="reset" onclick="reset()">Reset</h3><br>
+        <h3 class="new" onclick="newArtboard()">New Artboard</h3>
+    </div>
+</body>
+</html>
